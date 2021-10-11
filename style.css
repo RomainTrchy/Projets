@@ -59,7 +59,7 @@ p{
 }
 .bouton{
     display: inline-block;
-    background: #9882AC;
+    background: #a339ff;
     color: white;
     padding: 8px 30px;
     margin: 30px 0;
@@ -68,7 +68,8 @@ p{
 }
 
 .bouton:hover{
-    background: #453750;
+    background: #704f8b;
+    filter:drop-shadow(15px 15px 15px #A393BF)
 }
 
 .header{
@@ -89,11 +90,15 @@ p{
 }
 .col-3 img{
     width: 100%;
+    transition: .5s;
 }
 
 .col-3 img:hover{
-    filter: blur(3px);
-    transition: filter 0.5s;
+    filter:drop-shadow(15px 15px #A393BF) grayscale(0%);
+}
+
+.col-3:not(:hover){
+    filter: grayscale(100%);
 }
 
 .small-container{
@@ -104,12 +109,14 @@ p{
 }
 
 .col-4{
+    text-align: center;
     flex-basis: 25%;
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
-    transition: transform 0.5s;
+    transition: .5s;
 }
+
 .col-4 img{
     width: 100%;
 }
@@ -138,13 +145,42 @@ h4{
     font-size: 14px;
 }
 .notation{
-    color:#A393BF;
+    color:#a339ff;
 }
 .col-4:hover{
-    transform:translateY(-5px)
+    transform:translateY(-10px);
 }
 
+.col-3-2{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3-2 img{
+    width: 100%;
+}
 
+.avis{
+    padding-top: 100px;
+    background-color: whitesmoke;
+}
+.avis .col-3-2:hover{
+    transform: scale(1.1);
+}
+
+.avis .col-3-2{
+    text-align: center;
+    padding: 40px 20px;
+    transition: transform .3s;
+}
+
+.avis .col-3-2 img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
 
 
 
